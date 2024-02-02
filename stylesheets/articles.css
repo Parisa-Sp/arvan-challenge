@@ -1,0 +1,93 @@
+* {
+  transition: 0.3s all;
+}
+
+.btn-outline-secondary {
+  /* background-color: #56c0e0 !important; */
+  border-color: #56c0e0 !important;
+  color: #56c0e0 !important;
+}
+
+#dropdown {
+  border-color: #56c0e0 !important;
+  background-color: #56c0e0 !important;
+}
+
+#btn1:hover {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  cursor: pointer;
+}
+#btn2:hover {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 10 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  cursor: pointer;
+}
+
+#menu-button:hover {
+  cursor: pointer;
+}
+
+thead tr th {
+  color: #777777 !important;
+  background-color: #dddddd !important;
+}
+
+ nav {
+  --bs-link-color: black;
+} 
+
+#delete-toast,
+#subtoast,
+#create-toast,
+#edit-toast {
+  background-color: #e2eed8;
+  color: #5cb85c;
+  border-color: #eceeef;
+}
+
+
+#tags {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #1c7cd5 !important;
+  color: #777777 !important;
+}
+  
+
+.navbar-toggler {
+  background-color: #1c7cd5 !important;
+  /* color: #777777 !important;
+  border-color: #777777; */
+}
+
+@media screen and (max-width: 769px) {
+  #body-container {
+    overflow-x: hidden;
+  }
+}
+ 
+
+@media screen and (max-width: 376px) {
+  #create-toast, #edit-toast {
+    margin-right: 0 !important;
+    margin-left: 0 ;
+  }
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>article</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheets/articles.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0 " style="height: 100vh">
+      <div
+        style="background-color: #55595c; color: white; height: 6.5%"
+        id="container"
+      >
+        <div class="d-flex align-items-center p-1">
+          <div class="col-md-1 ms-md-3 m-2" style="width: fit-content">
+            Arvan Challenge
+          </div>
+          <div class="col-md-1" style="font-size: smaller">Welcome</div>
+          <button
+            type="button"
+            id="Logout"
+            class="btn btn-outline-secondary ms-auto"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <nav class="navbar d-md-none navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand text-light p-2 m-1" href="#">Posts</a>
+          <button
+            class="navbar-toggler me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+              <div
+                class="text-light nav-item p-2"
+                onclick="location.href='./articles.html'"
+              >
+                All Articles
+              </div>
+              <div
+                class="text-light nav-item p-2"
+                onclick="location.href='./createpage.html'"
+              >
+                New Articles
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="m-0 d-flex" style="height: 93.5%">
+        <div
+          class="p-0 d-none d-md-block"
+          id="sidebar-container"
+          style="background-color: #1c7cd5; width: 15%; height: 100%"
+        >
+          <div class="sidebar p-0 pt-2 text-light">
+            <div id="menu-button" class="fs-5 ms-3">Post</div>
+
+            <div
+              id="btn1"
+              class="mt-4 ps-4"
+              onclick="location.href='./articles.html'"
+            >
+              All Articles
+            </div>
+
+            <div
+              id="btn2"
+              class="mt-2 ps-4"
+              onclick="location.href='./createpage.html'"
+            >
+              New Articles
+            </div>
+          </div>
+        </div>
+
+        <div id="body-container" class="m-4 p-0 w-100">
+          <div id="body">
+            <div><h2>All Posts</h2></div>
+          </div>
+
+          <div class="row table-responsive m-0">
+            <table class="table mt-4 text-nowrap" style="padding: 0">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Tilte</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Tags</th>
+                  <th scope="col">Expert</th>
+                  <th scope="col">Created</th>
+                </tr>
+              </thead>
+              <tbody>
+                <td scope="row">1</td>
+                <td>Article title</td>
+                <td>@author_username</td>
+                <td>list of tags</td>
+                <td>First 20 words of article body</td>
+                <td class="d-flex">
+                  June 11, 2019
+                  <div class="dropdown" style="margin-left: 10%">
+                    <button
+                      id="dropdown"
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      ...
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./editpage.html">Edit</a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          >Delete</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+
+                <tr>
+                  <td scope="row">2</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">3</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">4</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">5</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td scope="row">6</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td scope="row">7</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td scope="row">8</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td scope="row">9</td>
+                  <td>Article title</td>
+                  <td>@author_username</td>
+                  <td>list of tags</td>
+                  <td>First 20 words of article body</td>
+                  <td class="d-flex">
+                    June 11, 2019
+                    <div class="dropdown" style="margin-left: 10%">
+                      <button
+                        id="dropdown"
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="./editpage.html"
+                            >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            >Delete</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <nav>
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="#"> < </a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#"> > </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Delete Article
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="pb-4">you sure to delete Article?</p>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-light ps-3 pe-3"
+                data-bs-dismiss="modal"
+              >
+                No
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-danger ps-4 pe-4"
+                data-bs-dismiss="modal"
+                id="delete"
+              >
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="toast position-absolute top-0 end-0 rounded-1"
+      role="alert"
+      data-bs-delay="1000"
+      aria-live="assertive"
+      aria-atomic="true"
+      id="delete-toast"
+      style="margin-top: 4rem; margin-right: 1.5rem; width: 14rem"
+    >
+      <div class="toast-body text-center">Article deleted successfuly</div>
+    </div>
+
+    <div
+      class="toast position-absolute top-0 end-0 rounded-1"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      id="edit-toast"
+      style="margin-top: 4rem; margin-right: 1.5rem; width: 20rem"
+    >
+      <div class="toast-body text-center">
+        <b>Well done!</b> Article updated successfuly
+      </div>
+    </div>
+
+    <div
+      class="toast position-absolute top-0 end-0 rounded-1"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      id="create-toast"
+      style="margin-top: 4rem; margin-right: 1.5rem; width: 20rem"
+    >
+      <div class="toast-body text-center">
+        <b>Well done!</b> Article created successfuly
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/b22ac7f979.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
