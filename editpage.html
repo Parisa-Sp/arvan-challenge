@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>article</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./stylesheets/articles.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0" style="height: 100vh">
+      <div
+        style="background-color: #55595c; color: white; height: 6.5%"
+        id="container"
+      >
+        <div class="d-flex align-items-center p-1">
+          <div class="col-md-1 ms-md-3 m-2" style="width:fit-content">
+            Arvan Challenge
+          </div>
+          <div class="col-md-1" style="font-size: smaller">Welcome</div>
+          <button
+            type="submit"
+            id="Logout"
+            class="btn btn-outline-secondary ms-auto"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <nav class="navbar d-md-none navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand text-light p-2 m-1" href="#">Posts</a>
+          <button
+            class="navbar-toggler me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+              <div
+                class="text-light nav-item p-2"
+                onclick="location.href='./articles.html'"
+              >
+                All Articles
+              </div>
+              <div
+                class="text-light nav-item p-2"
+                onclick="location.href='./createpage.html'"
+              >
+                New Articles
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="m-0 d-flex" style="height: 93.5%">
+        <div
+          class="p-0 d-none d-md-block"
+          id="sidebar-container"
+          style="background-color: #1c7cd5; width: 15%; height: 100%"
+        >
+          <div class="sidebar p-0 pt-2 text-light">
+            <div id="menu-button" class="fs-5 ms-3">Post</div>
+
+            <div
+              id="btn1"
+              class="mt-4 ps-4"
+              onclick="location.href='./Articles.html'"
+            >
+              All Articles
+            </div>
+
+            <div
+              id="btn2"
+              class="mt-2 ps-4"
+              onclick="location.href='./createpage.html'"
+            >
+              New Articles
+            </div>
+          </div>
+        </div>
+
+        <div id="body-new" class="m-4 p-0 col">
+          <div id="body">
+            <div><h2>Edit Article</h2></div>
+          </div>
+          <div>
+            <div class="d-md-none d-block">
+              <form class="needs-validation" id="form" novalidate>
+                <div class="mb-1">
+                  <label for="title" class="form-label mt-2">Title</label>
+                  <input type="text" class="form-control" id="title" required />
+                  <div class="invalid-feedback">Required field</div>
+                </div>
+                <div class="mb-1">
+                  <label for="description" class="form-label mt-2"
+                    >Description</label
+                  >
+                  <input type="text" class="form-control" id="description" />
+                </div>
+                <div class="mb-1">
+                  <label for="textarea" class="form-label mt-2">Body</label>
+                  <textarea
+                    class="form-control"
+                    id="textarea"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="tag" class="form-label mt-2">Tags</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tag"
+                    placeholder="New tag"
+                  />
+                </div>
+
+                <div id="tags">
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag0"
+                    />
+                    <label class="form-check-label" for="tag0"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag1"
+                    />
+                    <label class="form-check-label" for="tag1"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag2"
+                    />
+                    <label class="form-check-label" for="tag2"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag3"
+                    />
+                    <label class="form-check-label" for="tag3"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag4"
+                    />
+                    <label class="form-check-label" for="tag4"> Tag </label>
+                  </div>
+
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag5"
+                    />
+                    <label class="form-check-label" for="tag5"> Tag </label>
+                  </div>
+
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag6"
+                    />
+                    <label class="form-check-label" for="tag6"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag7"
+                    />
+                    <label class="form-check-label" for="tag7"> Tag </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="tag8"
+                    />
+                    <label class="form-check-label" for="tag8"> Tag </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <div class="col-11 d-md-block d-none">
+              <form
+                class="needs-validation d-flex gap-4 mt-4"
+                id="form"
+                novalidate
+              >
+                <div class="col-9">
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="title"
+                      required
+                    />
+                    <div class="invalid-feedback">Required field</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label"
+                      >Description</label
+                    >
+                    <input type="text" class="form-control" id="description" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="textarea" class="form-label">Body</label>
+                    <textarea
+                      class="form-control"
+                      id="textarea"
+                      rows="5"
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col-3">
+                  <div class="mb-3">
+                    <label for="tag" class="form-label">Tags</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="tag"
+                      placeholder="New tag"
+                    />
+                  </div>
+                  <div id="tags">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag0"
+                      />
+                      <label class="form-check-label" for="tag0"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag1"
+                      />
+                      <label class="form-check-label" for="tag1"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag2"
+                      />
+                      <label class="form-check-label" for="tag2"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag3"
+                      />
+                      <label class="form-check-label" for="tag3"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag4"
+                      />
+                      <label class="form-check-label" for="tag4"> Tag </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag5"
+                      />
+                      <label class="form-check-label" for="tag5"> Tag </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag6"
+                      />
+                      <label class="form-check-label" for="tag6"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag7"
+                      />
+                      <label class="form-check-label" for="tag7"> Tag </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="tag8"
+                      />
+                      <label class="form-check-label" for="tag8"> Tag </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/b22ac7f979.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/edit.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
